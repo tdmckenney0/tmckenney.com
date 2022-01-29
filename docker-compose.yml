@@ -9,3 +9,11 @@ services:
       - ./src/html:/var/www:ro
     ports:
       - "8080:80"
+
+  sass:
+    build: 
+      context: .
+      dockerfile: ./docker/sass/Dockerfile
+    volumes:
+      - ./src:/src
+      - ./node_modules:/node_modules
