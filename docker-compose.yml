@@ -7,6 +7,7 @@ services:
     volumes:
       - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./src/html:/var/www:ro
+      - ./src/css:/var/static/css:ro
     ports:
       - "8080:80"
 
