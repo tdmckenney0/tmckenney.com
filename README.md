@@ -1,6 +1,6 @@
 # Typescript ThreeJS Test
 
-_typescript-three-js-test_ combines Typescript, Three.js, and Bulma into crude game environment.
+_typescript-three-js-test_ combines Typescript, Three.js, React.js, and Bulma into crude game environment.
 
 ![Screenshot1](static/screenshots/screenshot1.png "screenshot1")
 
@@ -8,6 +8,8 @@ _typescript-three-js-test_ combines Typescript, Three.js, and Bulma into crude g
 
  - [Three.js](https://threejs.org/), primary 3D engine.
  - [Typescript](https://www.typescriptlang.org/), primary programming language.
+ - [React.js](https://reactjs.org/), reactionary framework
+ - [Bulma](https://bulma.io/), stylesheet
 
 ## Setup
 
