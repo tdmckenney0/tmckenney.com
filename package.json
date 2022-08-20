@@ -1,20 +1,20 @@
 {
-  "name": "typescript-three-js-test",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
+  "name": "tmckenney.com",
+  "version": "0.1",
+  "description": "Portfolio website for Tanner Mckenney",
+  "main": "index.tsx",
   "scripts": {
     "build": "webpack --config ./bundler/webpack.prod.js",
     "dev": "webpack-dev-server --config ./bundler/webpack.dev.js"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/tdmckenney0/tmckenney.com"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "homepage": "",
+  "author": "Tanner Mckenney",
+  "license": "GPLv3",
+  "homepage": "https://tmckenney.com",
   "devDependencies": {
     "@babel/core": "^7.*",
     "@babel/preset-env": "^7.*",
