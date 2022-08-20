@@ -2,8 +2,6 @@ import './style/main.scss'
 import * as React from 'react';
 import { render } from 'react-dom';
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import NavBar from './ui/NavBar';
 
 /**
  * Sizes
@@ -48,22 +46,6 @@ scene.add( directionalLight );
 const light = new THREE.AmbientLight( 0xffffff, 2.0 ); // soft white light
 scene.add( light );
 
-const loader = new GLTFLoader();
-
-loader.load( 'models/spacecraft/player/damocles/damocles.glb', function ( gltf ) {
-
-    gltf.scene.name = "Damocles";
-
-	scene.add( gltf.scene );
-
-    console.log("Added!");
-
-}, undefined, function ( error ) {
-
-	console.error( error );
-
-} );
-
 const skyGeo = new THREE.SphereGeometry(50, 25, 25); 
 
 // Renderer
@@ -73,7 +55,6 @@ const renderer = new THREE.WebGLRenderer({
 
 renderer.setPixelRatio(window.devicePixelRatio)
 renderer.setSize(sizes.width, sizes.height)
-
 
 interface Tasks {
     [key: string]: CallableFunction
@@ -98,8 +79,6 @@ const loop = () =>
         tasks[task]();
     }
 
-    skyGeo.rotateY(0.001);
-
     // Render
     renderer.render(scene, camera)
 
@@ -109,9 +88,27 @@ const loop = () =>
 
 loop();
 
+// Rotate the Sky geometry
+addTask(() => {
+    skyGeo.rotateY(0.00025);
+}, "rotateBackground");
+
+const background = new THREE.TextureLoader().load("backgrounds/nebula_background.png");
+// background.wrapS = THREE.RepeatWrapping;
+// background.wrapT = THREE.RepeatWrapping;
+// background.repeat.set( 4, 4 );
+
+const material = new THREE.MeshPhongMaterial({ 
+    map: background,
+});
+
+const sky = new THREE.Mesh(skyGeo, material);
+
+sky.material.side = THREE.BackSide;
+
+scene.add(sky);
+
 // Try to fire off React.
-const App = () => (
-    <NavBar scene={scene} skyGeo={skyGeo} addTask={addTask} removeTask={removeTask} />
-);
+const App = () => <></>;
   
 render(<App />, document.getElementById('app'));
