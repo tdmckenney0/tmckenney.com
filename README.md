@@ -1,9 +1,6 @@
-# Typescript ThreeJS Test
+# Personal Website
 
-_typescript-three-js-test_ combines Typescript, Three.js, React.js, and Bulma into crude game environment.
-
-![Screenshot1](static/screenshots/screenshot1.png "screenshot1")
-
+https://tmckenney.com
 ## Components
 
  - [Three.js](https://threejs.org/), primary 3D engine.
