@@ -40,11 +40,14 @@ camera.rotation.x = 0;
 
 scene.add(camera);
 
-const directionalLight = new THREE.DirectionalLight(0x9999FF, 0.5);
+const directionalLight = new THREE.DirectionalLight(0x0000FF, 0.5);
+
+directionalLight.position.set(0, 0, 1);
+
 scene.add(directionalLight);
 
 
-const light = new THREE.AmbientLight(0x000044, 1.0);
+const light = new THREE.AmbientLight(0x333344, 1.0);
 scene.add(light);
 
 const skyGeo = new THREE.SphereGeometry(50, 25, 25);
