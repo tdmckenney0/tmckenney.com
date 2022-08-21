@@ -9,7 +9,7 @@ export interface AppProps {
 
 export default (props: AppProps) => {
 	return <div className="columns is-vcentered is-centered is-full-height">
-		<div className="column is-three-fifths">
+		<div className="column is-two-fifths">
 			<div className="box">
 				<h1 className="title">Welcome</h1>
 				<div className="block">
