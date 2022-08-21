@@ -40,10 +40,11 @@ camera.rotation.x = 0;
 
 scene.add(camera);
 
-const directionalLight = new THREE.DirectionalLight(0xffffff, 1.0);
+const directionalLight = new THREE.DirectionalLight(0x9999FF, 0.5);
 scene.add(directionalLight);
 
-const light = new THREE.AmbientLight(0xffffff, 2.0); // soft white light
+
+const light = new THREE.AmbientLight(0x000044, 1.0);
 scene.add(light);
 
 const skyGeo = new THREE.SphereGeometry(50, 25, 25);
@@ -92,10 +93,12 @@ addTask(() => {
 	skyGeo.rotateY(0.00025);
 }, "rotateBackground");
 
-const background = new THREE.TextureLoader().load("backgrounds/interchange_nebula.png");
-// background.wrapS = THREE.RepeatWrapping;
-// background.wrapT = THREE.RepeatWrapping;
-// background.repeat.set( 4, 4 );
+const background = new THREE.TextureLoader().load("backgrounds/hexagon.png");
+
+background.wrapS = THREE.RepeatWrapping;
+background.wrapT = THREE.RepeatWrapping;
+background.repeat.set( 15, 15 );
+background.anisotropy = 64;
 
 const material = new THREE.MeshPhongMaterial({
 	map: background,
