@@ -10,3 +10,6 @@ lib/
 *.translation
 .mono/
 export_presets.cfg
+
+# Don't keep distribution files
+dist/
