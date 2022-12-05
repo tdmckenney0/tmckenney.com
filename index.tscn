@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="ProceduralSky" id=1]
+ground_bottom_color = Color( 0.407843, 0.14902, 0.14902, 1 )
+ground_horizon_color = Color( 0.607843, 0.305882, 0.0431373, 1 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Spatial" type="Spatial" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Spatial"]
+environment = SubResource( 2 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="Spatial"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Camera" type="Camera" parent="Spatial/ViewportContainer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+margin_left = 432.0
+margin_top = 493.0
+margin_right = 583.0
+margin_bottom = 518.0
+text = "Press This Button"
