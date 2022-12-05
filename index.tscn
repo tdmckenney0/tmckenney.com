@@ -96,45 +96,56 @@ material = SubResource( 2 )
 
 [node name="OmniLight" type="OmniLight" parent="Spatial"]
 
-[node name="Control" type="Control" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1.0
+margin_top = 1.0
+margin_right = -1.0
+margin_bottom = 1.0
 
-[node name="Panel" type="Panel" parent="Control"]
-margin_left = 227.0
-margin_top = 160.0
-margin_right = 770.0
-margin_bottom = 423.0
+[node name="Control" type="Control" parent="CenterContainer"]
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 512.0
+margin_bottom = 300.0
+
+[node name="Panel" type="Panel" parent="CenterContainer/Control"]
+anchor_right = 0.222
+margin_left = -282.0
+margin_top = -132.0
+margin_right = 261.0
+margin_bottom = 131.0
 theme = ExtResource( 3 )
 custom_styles/panel = SubResource( 4 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/Control/Panel"]
 margin_left = 24.0
 margin_top = 207.0
 margin_right = 518.0
 margin_bottom = 247.0
 
-[node name="Button" type="Button" parent="Control/Panel/HBoxContainer"]
+[node name="Button" type="Button" parent="CenterContainer/Control/Panel/HBoxContainer"]
 margin_right = 162.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 text = "Github"
 
-[node name="Button2" type="Button" parent="Control/Panel/HBoxContainer"]
+[node name="Button2" type="Button" parent="CenterContainer/Control/Panel/HBoxContainer"]
 margin_left = 166.0
 margin_right = 328.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 text = "LinkedIn"
 
-[node name="Button3" type="Button" parent="Control/Panel/HBoxContainer"]
+[node name="Button3" type="Button" parent="CenterContainer/Control/Panel/HBoxContainer"]
 margin_left = 332.0
 margin_right = 494.0
 margin_bottom = 40.0
 size_flags_horizontal = 3
 text = "Source"
 
-[node name="Label" type="Label" parent="Control/Panel"]
+[node name="Label" type="Label" parent="CenterContainer/Control/Panel"]
 margin_left = 25.0
 margin_top = 11.0
 margin_right = 270.0
@@ -143,7 +154,7 @@ custom_fonts/font = SubResource( 3 )
 text = "Welcome"
 uppercase = true
 
-[node name="Label2" type="Label" parent="Control/Panel"]
+[node name="Label2" type="Label" parent="CenterContainer/Control/Panel"]
 margin_left = 25.0
 margin_top = 71.0
 margin_right = 519.0
