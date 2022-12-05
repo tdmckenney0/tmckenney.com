@@ -1,0 +1,12 @@
+# Import cache
+.import/
+
+# Binaries
+bin/
+build/
+lib/
+
+# Configuration
+*.translation
+.mono/
+export_presets.cfg
