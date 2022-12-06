@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Tmckenney.com"
+config/name="Website of Tanner D. Mckenney"
 run/main_scene="res://index.tscn"
 config/icon="res://icon.png"
 
