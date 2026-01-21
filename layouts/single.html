@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h1 class="block title has-text-centered">{{ .Title }}</h1>
+<div class="block content has-text-justified">
+    {{ .Content }}
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+</div>
+{{ end }}
