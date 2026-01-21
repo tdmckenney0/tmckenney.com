@@ -89,7 +89,7 @@ addTask(() => {
     skyGeo.rotateY(0.00025);
 }, "rotateBackground");
 
-const background = new THREE.TextureLoader().load("backgrounds/hexagon.png");
+const background = new THREE.TextureLoader().load("/backgrounds/hexagon.png");
 
 background.wrapS = THREE.RepeatWrapping;
 background.wrapT = THREE.RepeatWrapping;
