@@ -1,12 +1,6 @@
 {{ define "main" }}
-<section id="single" class="section is-full-height">
-    <div class="container">
-        <div class="box">
-            <h1 class="block title has-text-centered">{{ .Title }}</h1>
-            <div class="block content has-text-justified">
-                {{ .Content }}
-            </div>
-        </div>
-    </div>
-</section>
+<h1 class="title">{{ .Title }}</h1>
+<div class="content">
+    {{ .Content }}
+</div>
 {{ end }}
