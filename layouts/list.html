@@ -1,10 +1,12 @@
 {{ define "main" }}
-<h1 class="title has-text-justified is-uppercase">{{ .Title }}</h1>
-<div class="content has-text-justified">
+<h1 class="page-title">{{ .Title }}</h1>
+<div class="page-content article-list">
     {{ .Content }}
     {{ range .Pages }}
-    <h2 class="is-clipped"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}<a href="{{ .RelPermalink }}">(cont.)</a>
+    <article class="article-card">
+        <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <p class="article-summary">{{ .Summary }} <a href="{{ .RelPermalink }}" class="read-more">(cont.)</a></p>
+    </article>
     {{ end }}
 </div>
 {{ end }}

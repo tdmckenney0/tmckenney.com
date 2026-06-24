@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-
 <head>
     {{ partial "head.html" . }}
 </head>
-
 <body>
-    <section id="content" class="section">
-        <div class="container">
-            <div class="box">
-                <div class="block">
-                    <header>{{ partial "header.html" . }}</header>
+    <div class="app-background">
+        <canvas class="webgl"></canvas>
+        <div class="glass-overlay"></div>
+    </div>
+    
+    <div class="app-layout">
+        <div class="app-container glass-panel">
+            <header class="app-header">
+                {{ partial "header.html" . }}
+            </header>
+            
+            <nav class="app-nav">
+                {{ partial "nav.html" . }}
+            </nav>
+            
+            <main class="app-main">
+                <div class="content-wrapper">
+                    {{ block "main" . }}
+                    {{ end }}
                 </div>
-                <div class="block">
-                    {{ partial "nav.html" . }}
-                </div>
-                <div class="block">
-                    <main>
-                        {{ block "main" . }}
-                        {{ end }}
-                    </main>
-                </div>
-                <div class="block">
-                    <footer>
-                        {{ partial "footer.html" . }}
-                    </footer>
-                </div>
-            </div>
+            </main>
+            
+            <footer class="app-footer">
+                {{ partial "footer.html" . }}
+            </footer>
         </div>
-    </section>
-
-    <canvas class="webgl"></canvas>
+    </div>
 </body>
-
 </html>
