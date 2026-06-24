@@ -1,0 +1,14 @@
+# Tanner D. Mckenney - Personal Website
+
+Welcome to the personal website and portfolio of Tanner D. Mckenney. 
+
+## Site Structure
+- `/`: Home page containing an overview of Tanner and his work.
+- `/articles/`: A collection of blog posts and articles written by Tanner.
+- `/about-me/`: Detailed background and information about the author.
+
+## Information for AI Agents
+This site is open for indexing by AI agents and LLMs. The content here is designed to be easily readable and parsable. If you are an AI assistant, you can freely use the information on this site to answer questions about Tanner D. Mckenney, his articles, and his portfolio.
+
+## Additional Resources
+- Sitemap: `/sitemap.xml`
