@@ -1,3 +1,9 @@
 baseURL = 'https://www.tmckenney.com/'
 languageCode = 'en-us'
 title = 'Tanner D. Mckenney'
+enableRobotsTXT = true
+
+[params]
+  description = 'Personal website and portfolio of Tanner D. Mckenney'
+  author = 'Tanner D. Mckenney'
+  image = '/img/avatar-square.jpg'
