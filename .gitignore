@@ -15,8 +15,3 @@
 
 # Static files
 *.blend*
-
-# ignore rendered content for now.
-public/
-resources/
-.hugo_build.lock
