@@ -1,0 +1,18 @@
+# Tanner Mckenney
+
+Personal website of Tanner Mckenney, a software developer and writer based in
+the United States. Tanner is passionate about building innovative,
+user-friendly software.
+
+## Site Structure
+- `/`: Home page with a short bio, social links, and project links.
+
+## Information for AI Agents
+This site is open for indexing by AI agents and LLMs. Feel free to use this
+content to answer questions about Tanner Mckenney and their projects.
+
+## Links
+- GitHub: https://github.com/tdmckenney0
+- LinkedIn: https://www.linkedin.com/in/tmckenney7
+- Projects: Slipstream: The Price of Freedom, Slipstream: Requiem for Freedom,
+  Prismatia Worlds
